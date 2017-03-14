@@ -32,6 +32,7 @@ var AppModule = (function () {
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,
                 dashboard_component_1.DashboardComponent,
+                app_routing_module_1.routedComponents,
             ],
             providers: [hero_service_1.HeroService],
             bootstrap: [app_component_1.AppComponent]
