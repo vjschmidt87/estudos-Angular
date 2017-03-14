@@ -17,7 +17,8 @@ var AppComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <div class=\"header-bar\"></div>\n    <nav>\n        <a routerLink=\"/dashboard\">Dashboard</a>\n        <a routerLink=\"/heroes\">Heroes</a>\n    </nav>\n    <router-outlet></router-outlet>\n  "
+            templateUrl: './app.component.html',
+            styleUrls: ['./app.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
