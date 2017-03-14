@@ -32,5 +32,4 @@ var AppRoutingModule = (function () {
     return AppRoutingModule;
 }());
 exports.AppRoutingModule = AppRoutingModule;
-exports.routedComponents = [dashboard_component_1.DashboardComponent, heroes_component_1.HeroesComponent, hero_detail_component_1.HeroDetailComponent];
 //# sourceMappingURL=app-routing.module.js.map
