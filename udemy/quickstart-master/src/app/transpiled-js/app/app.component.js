@@ -8,14 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Vinicius';
+        this.username = "Testing";
+        this.currentUser = { username: "Test", email: "test@test.com" };
     }
+    AppComponent.prototype.getUsername = function () {
+        return this.currentUser.username;
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>Hello {{name}}! Server is running</h1>",
+        templateUrl: 'app/templates/app.component.html',
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

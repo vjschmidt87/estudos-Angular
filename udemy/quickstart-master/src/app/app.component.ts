@@ -2,6 +2,20 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}! Server is running</h1>`,
+  templateUrl: 'app/templates/app.component.html',
 })
-export class AppComponent  { name = 'Vinicius'; }
+
+export class AppComponent  { 
+  private username:string = "Testing"
+  private currentUser:User = { username: "Test", email: "test@test.com"}
+
+  private getUsername():string {
+    return this.currentUser.username
+  }
+
+}
+
+interface User {
+  username:string,
+  email:string
+}
