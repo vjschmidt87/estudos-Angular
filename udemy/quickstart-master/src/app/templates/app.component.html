@@ -1,17 +1,19 @@
 <h1>My Fisrt Angular 2 App</h1>
+<div>
+    <p>Hello, {{currentUser.username}}!</p>
+    <p [hidden] = 'hideEmail'> Your email is: <em>{{currentUser.email}}</em></p>
 
-<p>This is just ordinary HTML paragraph</p>
+    <button (click)="toggleEmail()">Toggle e-mail</button>
+</div>
 
-<p>Result of 1 + 1 is {{ 1 + 1 }}</p>
+<div>
+    <input type="text" #a (keyup)="0">
+    <p>Value of input is: {{a.value}}</p>
+</div>
 
-<p> Hello, {{username}}!</p>
+<div>
+    <h3>Change e-mail:</h3>
+    <input type="text" name="name" #newEmail (keyup.enter)="changeEmail(newEmail.value)">
 
-<h1>My Fisrt Angular 2 App</h1>
-
-<p>Hello, {{currentUser.username}} - {{currentUser.email}}</p>
-
-<p>Hello, {{currentUser.username + ' - ' + currentUser.email}}</p>
-
-<p>Hello, {{getUsername()}}!</p>
-
-<input value="{{getUsername()}}" type="text">
+    <button (click)="changeEmail(newEmail.value)">Change</button>
+</div>

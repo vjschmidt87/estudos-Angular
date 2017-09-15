@@ -6,13 +6,25 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent  { 
-  private username:string = "Testing"
   private currentUser:User = { username: "Test", email: "test@test.com"}
 
-  private getUsername():string {
-    return this.currentUser.username
+  private hideEmail:boolean = false
+
+  private toggleEmail() {
+    return this.hideEmail = !this.hideEmail
   }
 
+  private changeEmail(newEmail:string) {
+    this.currentUser.email = newEmail
+  }
+
+  //deprecated
+  private keyPress(event:KeyboardEvent) {
+    if(event.keyCode == 13) {
+      var inputElement = <HTMLInputElement>event.target
+      this.changeEmail(inputElement.value)
+    }
+  }
 }
 
 interface User {

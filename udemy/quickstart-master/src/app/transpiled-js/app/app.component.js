@@ -8,11 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.username = "Testing";
         this.currentUser = { username: "Test", email: "test@test.com" };
+        this.hideEmail = false;
     }
-    AppComponent.prototype.getUsername = function () {
-        return this.currentUser.username;
+    AppComponent.prototype.toggleEmail = function () {
+        return this.hideEmail = !this.hideEmail;
+    };
+    AppComponent.prototype.changeEmail = function (newEmail) {
+        this.currentUser.email = newEmail;
+    };
+    //deprecated
+    AppComponent.prototype.keyPress = function (event) {
+        if (event.keyCode == 13) {
+            var inputElement = event.target;
+            this.changeEmail(inputElement.value);
+        }
     };
     return AppComponent;
 }());
