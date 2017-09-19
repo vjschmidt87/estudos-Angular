@@ -10,6 +10,14 @@ export class AppComponent  {
 
   private hideEmail:boolean = false
 
+  private users:Array<User> = [
+    { username: "User1", email: "user1@test.com" },
+    { username: "User2", email: "user2@test.com" },
+    { username: "User3", email: "user3@test.com" },
+    { username: "User4", email: "user4@test.com" },
+    { username: "User5", email: "user5@test.com" },
+  ]
+
   private toggleEmail() {
     return this.hideEmail = !this.hideEmail
   }
